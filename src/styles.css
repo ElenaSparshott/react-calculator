@@ -18,6 +18,6 @@ body {
     grid-column: span 2;
 }
 
-output {
+.output {
     grid-column: 1 / -1;
 }
