@@ -9,12 +9,13 @@ const ACTIONS = {
   EVALUATE:'evaluate'
 }
 
-function reducer(state, { type, payload}) {
+function reducer(state, { type, payload }) {
+  // eslint-disable-next-line default-case
   switch (type) {
     case ACTIONS.ADD_DIGIT:
       return {
         ...state,
-        currentOperand: `${currentOperand}${payload.digit}`
+        currentOperand: `${state.currentOperand || ""}${payload.digit}`
       }
   }
 }
